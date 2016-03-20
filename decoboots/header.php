@@ -43,16 +43,16 @@ if ( is_user_logged_in() ) {
       <ul class="nav navbar-nav">
       <?php
       $actualUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-      foreach ($menu_items as $value):
-          $class = '';
-          if ($value->url == $actualUrl) $class = 'menu__current';
-          echo '<li><a class="'.$class.'" href="' .$value->url.'">'.$value->title.'</a></li>';
-      endforeach;
+      if ($menu_items !== FALSE) :
+        foreach ($menu_items as $value):
+            $class = '';
+            if ($value->url == $actualUrl) $class = 'menu__current';
+            echo '<li><a class="'.$class.'" href="' .$value->url.'">'.$value->title.'</a></li>';
+        endforeach;
+      endif;
       ?>
       </ul>
     </div><!-- /.nav-collapse -->
   </div><!-- /.container -->
 </nav><!-- /.navbar -->
 <div class="container <?php echo $login_class ?>">
-
-

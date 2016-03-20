@@ -2,8 +2,6 @@ var $ = require('jquery');
 
 module.exports = function(){
 
-  jQuery(function ($) {
-
     $(document).ready( function() {
       function addPost(post){
         $(post).hide().appendTo("#recipient").fadeIn(1000);
@@ -41,7 +39,5 @@ module.exports = function(){
        });
 
     });
-
-  })
 
 }

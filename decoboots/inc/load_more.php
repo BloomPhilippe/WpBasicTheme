@@ -1,7 +1,4 @@
-
-
 <?php
-
 class LoadMore{
 
   function __construct(){
@@ -37,4 +34,4 @@ class LoadMore{
 if (class_exists('LoadMore')){
   $inst_LoadMore = new LoadMore();
 }
-
+?>

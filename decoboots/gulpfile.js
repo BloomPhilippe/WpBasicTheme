@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
     return gulp.src([bower + '/jquery/dist/jquery.js', bower + '/bootstrap-sass/assets/javascripts/bootstrap.js','js/parts/*.js'])
     .pipe(uglify())
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('js/'))
+    .pipe(gulp.dest('js/min'))
     .pipe(size())
     .on('end', function(){
         gutil.log(gutil.colors.yellow('♠ La tâche JavaScript est terminée.'));
