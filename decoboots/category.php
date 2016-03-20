@@ -17,6 +17,7 @@ $args = array(
         'posts_per_page' => 3
       );
 query_posts( $args );
+
 ?>
 <div id="recipient" class="row">
 <?php
@@ -26,7 +27,7 @@ if ( have_posts() ) :
 	endwhile;
 ?>
 </div><!--/row-->
-<button class="btn btn-default load-more" data-type="post" data-limit="6" data-page="1" >Load More</button>
+<button class="btn btn-default load-more" data-type="post" data-limit="3" data-page="2" data-count="<?php echo get_count('post') ?>">Load More</button>
 <?php
 else :
 	get_template_part( 'content', 'none' );

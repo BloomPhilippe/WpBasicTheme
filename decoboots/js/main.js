@@ -8,6 +8,11 @@ jQuery(function ($) {
         var type = $(this).attr("data-type");
         var limit = $(this).attr("data-limit");
         var page = $(this).attr("data-page");
+        var count = $(this).attr("data-count");
+        var maxPage = Math.ceil(count / limit);
+        if (page >= maxPage) {
+          return;
+        };
         $.ajax({
            type : "get",
            contentType: "application/json; charset=utf-8",
@@ -23,8 +28,9 @@ jQuery(function ($) {
             $.each( $(response+' div'), function( i, el ) {
               setTimeout(function(){
                   addPost(el);
-              },500 + ( i * 500 ));
+              },500 + ( i * 200 ));
             });
+            $(".load-more").attr("data-page", parseInt(page) + 1)
            }
         })
 
