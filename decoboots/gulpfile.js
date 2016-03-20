@@ -37,7 +37,14 @@ gulp.task('scripts', function() {
     });
 });
 
+gulp.task('watch', function()
+{
+  gulp.watch('css/*.scss', ['styles']);
+  gulp.watch('css/**/*.scss', ['styles']);
+  gulp.watch('js/*.js', ['scripts']);
+});
+
 // default task
 gulp.task('default', function() {
-    gulp.start('styles', 'scripts');
+    gulp.start('watch');
 });

@@ -3,8 +3,8 @@
  * Page 404
  *
  * @package WordPress
- * @subpackage BloomPhilippeTheme
- * @since BloomPhilippe Theme 1.0.0
+ * @subpackage DecobootsTheme
+ * @since Decoboots Theme 1.0.0
  */
 
 get_header(); ?>
