@@ -18,7 +18,7 @@ if ( ! function_exists( 'decoboots_enqueue_scripts' ) ) {
   function decoboots_enqueue_scripts() {
 
     // Register main theme script
-    wp_register_script( 'main', get_stylesheet_directory_uri() . '/js/main.js', TRUE );
+    wp_register_script( 'main', get_stylesheet_directory_uri() . '/js/build/main.js', TRUE );
     wp_enqueue_script( 'main' );
 
     // Add JS global variables
