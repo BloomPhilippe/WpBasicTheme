@@ -6,7 +6,7 @@
 if ( ! function_exists( 'decoboots_enqueue_styles' ) ) {
   function decoboots_enqueue_styles() {
     // Main Stylesheet
-    wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/styles/main.min.css', array(), FALSE );
+    wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/styles/main.css', array(), FALSE );
   }
   add_action( 'wp_enqueue_scripts', 'decoboots_enqueue_styles' );
 }

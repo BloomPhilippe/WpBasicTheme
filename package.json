@@ -1,29 +1,34 @@
 {
-  "name": "gulp-decoboots",
-  "version": "0.0.1",
-  "description": "Basic process for styles (sass), scripts (concat, uglify, sourcemaps)",
-  "author": {
-    "name": "BloomPhilippe",
-    "email": "bloom_phil@hotmail.com",
-    "url": "http://bloomandweb.be"
+  "name": "wp-decoboots",
+  "version": "1.0.0",
+  "description": "Theme wordpress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BloomPhilippe/wp-decoboots.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Bloom Philippe <bloom_phil@hotmail.com> (bloom_phil@hotmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BloomPhilippe/wp-decoboots/issues"
+  },
+  "homepage": "https://github.com/BloomPhilippe/wp-decoboots#readme",
   "devDependencies": {
-    "browser-sync": "^2.11.0",
-    "require-dir": "^0.3.0",
-    "motion-ui": "^1.1.1",
-    "gulp": "^3.8.10",
+    "bower": "^1.7.7",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-plumber": "*",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^2.1.1",
-    "gulp-size": "^2.0.0",
-    "gulp-watch": "^4.3.5",
-    "gulp-browserify": "^0.5.1",
-    "gulp-svg-sprite": "^1.2.19",
-    "gulp-svgmin": "^1.2.0"
-  },
-  "dependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-filesize": "0.0.6",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7"
   }
 }
