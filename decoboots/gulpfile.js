@@ -15,15 +15,15 @@ var bower = './bower_components';
 // css task
 gulp.task('styles', function () {
     return gulp.src('css/main.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 version'))
-    .pipe(rename('main.css'))
-    .pipe(minifycss())
-    .pipe(gulp.dest('css/'))
-    .pipe(size())
-    .on('end', function(){
-        gutil.log(gutil.colors.yellow('♠ La tâche CSS est terminée.'));
-    });
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer('last 2 version'))
+        .pipe(rename('main.css'))
+        .pipe(minifycss())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('css/'))
+        .on('end', function(){
+            gutil.log(gutil.colors.yellow('♠ La tâche CSS est terminée.'));
+        });
 });
 
 gulp.task('browserify', function() {
@@ -34,18 +34,15 @@ gulp.task('browserify', function() {
           debug : !gulp.env.production
         }))
         .pipe(gulp.dest('js/build'))
-});
-
-// javascript task
-gulp.task('scripts', function() {
-    return gulp.src([bower + '/jquery/dist/jquery.js', bower + '/bootstrap-sass/assets/javascripts/bootstrap.js','js/parts/*.js'])
-    .pipe(uglify())
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('js/min'))
-    .pipe(size())
-    .on('end', function(){
-        gutil.log(gutil.colors.yellow('♠ La tâche JavaScript est terminée.'));
-    });
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('js/build'))
+        .pipe(size())
+        .on('end', function(){
+            gutil.log(gutil.colors.yellow('♠ La tâche JavaScript est terminée.'));
+        });
 });
 
 gulp.task('watch', function()
