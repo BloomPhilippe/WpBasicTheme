@@ -8,7 +8,7 @@
  */
 
 include( 'inc/assets.php' );
-include( 'inc/load_more.php' );
+include( 'inc/loadMore.php' );
 
 function truncate_text($text, $nbr) {
   return substr($text, 0, $nbr) . '...';
