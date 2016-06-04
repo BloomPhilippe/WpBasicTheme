@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     gutil = require('gulp-util'),
-    size = require('gulp-filesize');
+    size = require('gulp-filesize'),
     browserify = require('gulp-browserify');
 
 // Paths
