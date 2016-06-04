@@ -1,13 +1,31 @@
 <?php
 
-$my_cat_1 = array('cat_name' => 'Catégorie 1', 'category_description' => 'A Cool Category', 'category_nicename' => 'categorie-1', 'category_parent' => '');
-$my_cat_id_1 = wp_insert_category($my_cat_1);
+$cat_1 = wp_insert_term(
+    'Catégorie 1',
+    'category',
+    array(
+        'description'=> 'Categorie test',
+        'slug' => 'categorie-1',
+    )
+);
+$cat_2 = wp_insert_term(
+    'Catégorie 2',
+    'category',
+    array(
+        'description'=> 'Categorie test',
+        'slug' => 'categorie-2',
+    )
+);
+$cat_3 = wp_insert_term(
+    'Catégorie 3',
+    'category',
+    array(
+        'description'=> 'Categorie test',
+        'slug' => 'categorie-3',
+    )
+);
 
-$my_cat_2 = array('cat_name' => 'Catégorie 2', 'category_description' => 'A Cool Category', 'category_nicename' => 'categorie-2', 'category_parent' => '');
-$my_cat_id_2 = wp_insert_category($my_cat_2);
 
-$my_cat_3 = array('cat_name' => 'Catégorie 3', 'category_description' => 'A Cool Category', 'category_nicename' => 'categorie-3', 'category_parent' => '');
-$my_cat_id_3 = wp_insert_category($my_cat_3);
 
 for ($x = 0; $x <= 10; $x++) {
     $my_post = array(
@@ -16,7 +34,7 @@ for ($x = 0; $x <= 10; $x++) {
         'post_status'   => 'publish',
         'post_type' => 'post',
         'post_author'   => 1,
-        'post_category' => array($my_cat_id_3)
+        'post_category' => array($cat_3)
     );
 
     wp_insert_post( $my_post );
