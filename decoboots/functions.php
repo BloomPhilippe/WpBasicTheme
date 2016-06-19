@@ -7,15 +7,14 @@
  * @since Decoboots Theme 1.0.0
  */
 
+
 include( 'inc/assets.php' );
 include( 'inc/loadMore.php' );
-
-/*
- * Si tu désires des données factices, décommente la ligne ci-dessous, rafraichis ton navigateur sur une page du site et ccomment à nouveau la ligne.
- * Si tu ne commentes pas à nouveau la ligne, le script d'import des données va s'executer à nouveau
- */
 include( 'inc/exampleData.php' );
 
+register_nav_menus(array(
+    'main-menu' => __('Menu primaire', 'menu-primaire')
+));
 function truncate_text($text, $nbr) {
   return substr($text, 0, $nbr) . '...';
 }

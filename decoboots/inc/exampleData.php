@@ -87,6 +87,44 @@ class ExampleData
 
         foreach ($newPagesID as $key => $id) {
             update_post_meta($id, '_wp_page_template', 'pages-templates/' . $key . '.php');
+            if($key == 'home'){
+                $this->setForntPage($id);
+            }
+        }
+
+        $this->createMenu();
+    }
+
+    function setForntPage($id){
+        update_option( 'page_on_front', $id );
+        update_option( 'show_on_front', 'page' );
+    }
+
+    function createMenu(){
+        $menu_name = 'main-menu';
+        $menu_exists = wp_get_nav_menu_object( $menu_name );
+        if( !$menu_exists){
+            $menu_id = wp_create_nav_menu($menu_name);
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('Home'),
+                'menu-item-classes' => 'home',
+                'menu-item-url' => home_url( '/' ),
+                'menu-item-status' => 'publish')
+            );
+
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('Page 1'),
+                'menu-item-classes' => 'page-1',
+                'menu-item-url' => home_url( '/' ),
+                'menu-item-status' => 'publish')
+            );
+
+            wp_update_nav_menu_item($menu_id, 0, array(
+                'menu-item-title' =>  __('Page 2'),
+                'menu-item-classes' => 'page-2',
+                'menu-item-url' => home_url( '/' ),
+                'menu-item-status' => 'publish')
+            );
         }
     }
 

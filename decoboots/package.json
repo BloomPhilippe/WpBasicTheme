@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/BloomPhilippe/wp-decoboots#readme",
   "devDependencies": {
+    "bootstrap": "^3.3.6",
     "bower": "*",
     "browserify": "*",
     "gulp": "*",

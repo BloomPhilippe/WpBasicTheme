@@ -9,9 +9,6 @@ var gulp = require('gulp'),
     size = require('gulp-filesize'),
     browserify = require('gulp-browserify');
 
-// Paths
-var bower = './bower_components';
-
 // css task
 gulp.task('styles', function () {
     return gulp.src('css/main.scss')

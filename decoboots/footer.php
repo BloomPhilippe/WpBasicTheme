@@ -9,11 +9,12 @@
  * @since Decoboots Theme 1.0.0
  */
 ?>
-  <hr>
-  <footer>
-    <p>&copy; 2015 Company, Inc.</p>
-  </footer>
-</div>
+
 <?php wp_footer(); ?>
+<footer>
+  <div class="container">
+    <p>&copy; 2015 Company, Inc.</p>
+  </div>
+</footer>
 </body>
 </html>
