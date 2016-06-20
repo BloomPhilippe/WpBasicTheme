@@ -1,7 +1,18 @@
 @import 'variables';
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 @import 'decoboots';
+@import "font-awesome.css";
+@import "open-sans.css";
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800');
 
+body{
+  font-family: "open_sansregular";
+  color: #555;
+  font-size: 16px;
+}
+h1, h2, h3, h4{
+  color: #363636;
+}
 .navbar {
   background-color: #007CB7;
   border: none;
@@ -37,6 +48,7 @@
       }
       a, a:hover, a:focus, a:active {
         color: #ffffff;
+        text-transform: uppercase;
       }
     }
   }
@@ -44,7 +56,7 @@
 
 .row-slider {
   background: #002C5D;
-  height: 470px;
+  height: 550px;
   img {
     width: 1903px;
     height: 1071.39px;
@@ -54,6 +66,9 @@
 .row-slogans {
   padding: 15px;
   .container {
+    .div-slogans{
+      padding-top: 35px;
+    }
     h4 {
       font-weight: bold;
     }
@@ -85,6 +100,10 @@
 .row-content{
   background-color: #F4F4F2;
   min-height: 400px;
+  .container-content{
+    text-align: center;
+    padding: 40px;
+  }
 }
 .row-message{
   color: #ffffff!important;

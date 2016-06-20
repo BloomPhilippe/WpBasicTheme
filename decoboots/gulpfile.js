@@ -45,7 +45,6 @@ gulp.task('browserify', function() {
 gulp.task('watch', function()
 {
   gulp.watch('css/*.scss', ['styles']);
-  gulp.watch('css/**/*.scss', ['styles']);
   gulp.watch('js/**/*.js', ['browserify']);
   gulp.watch('js/*.js', ['browserify']);
 });

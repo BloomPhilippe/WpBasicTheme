@@ -20,7 +20,7 @@ get_header();
     <?php
     foreach ($slogans as $slogan):
     ?>
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-4 col-md-4 div-slogans">
         <div class="col-lg-2 col-md-2 col-icon">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </div>
@@ -37,7 +37,31 @@ get_header();
     </div>
 </div>
 <div class="row row-content">
-
+    <div class="container container-content">
+        <h1>
+            <?php
+            echo get_the_title();
+            ?>
+        </h1>
+        <p>
+            <?php
+            echo get_the_content();
+            ?>
+        </p>
+    </div>
+    <div class="container container-lastest-news">
+        <?php
+        $args_for_latest = array(
+            'post_type'      => 'post',
+            'posts_per_page' => 3
+        );
+        $latest_news = get_posts( $args_for_latest );
+        foreach ($latest_news as $news) :
+            echo $news->post_title;
+        endforeach;
+        wp_reset_postdata();
+        ?>
+    </div>
 </div>
 <div class="row row-message">
     <div class="shodow-top"></div>
