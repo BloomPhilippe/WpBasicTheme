@@ -13,7 +13,7 @@
 <?php wp_footer(); ?>
 <footer>
   <div class="container">
-    <p>&copy; 2015 Company, Inc.</p>
+    <p>&copy; 2016 Company, Inc.</p>
   </div>
 </footer>
 </body>

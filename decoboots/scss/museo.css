@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'museosans_500_regular';
+    src: url('../fonts/museo/MuseoSans.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_500_regular';
+    src: url('../fonts/museo/Museo500-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -35,3 +35,5 @@ if ( ! function_exists( 'decoboots_enqueue_scripts' ) ) {
 
   add_action( 'wp_enqueue_scripts', 'decoboots_enqueue_scripts' );
 }
+
+add_theme_support( 'post-thumbnails' ); 

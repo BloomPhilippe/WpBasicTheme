@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 
 // css task
 gulp.task('styles', function () {
-    return gulp.src('css/main.scss')
+    return gulp.src('scss/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer('last 2 version'))
         .pipe(rename('main.css'))
@@ -44,7 +44,7 @@ gulp.task('browserify', function() {
 
 gulp.task('watch', function()
 {
-  gulp.watch('css/*.scss', ['styles']);
+  gulp.watch('scss/*.scss', ['styles']);
   gulp.watch('css/**/*.scss', ['styles']);
   gulp.watch('js/**/*.js', ['browserify']);
   gulp.watch('js/*.js', ['browserify']);

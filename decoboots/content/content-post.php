@@ -15,8 +15,16 @@
     $term = get_the_category();
     $link_term = get_category_link($term[0]->term_id);
 ?>
-<div class="col-xs-6 col-lg-4">
-  <h2><?php echo $title ?></h2>
-  <p><?php echo truncate_text($content, 100) ?></p>
-  <p><a role="button" href="<?php echo get_permalink(); ?>" class="btn btn-default">View details »</a></p>
+<div class="col-xs-6 col-lg-3 col-md-3 box-post">
+    <div class="cover">
+        <img class="img-responsive" src="<?php echo $picture ?>">
+    </div>
+    <div class="content">
+        <h4><?php echo $title ?></h4>
+        <p class="text"><?php echo truncate_text($content, 150) ?></p>
+        <p class="link"><a href="<?php echo get_permalink(); ?>">View details</a></p>
+    </div>
+    <div class="box-icon">
+        <span class="icon-home"></span>
+    </div>
 </div><!--/.col-xs-6.col-lg-4-->
