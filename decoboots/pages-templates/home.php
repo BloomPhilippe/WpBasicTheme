@@ -20,7 +20,7 @@ get_header();
     <?php
     foreach ($slogans as $slogan):
     ?>
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-4 col-md-4 div-slogans">
         <div class="col-lg-2 col-md-2 col-icon">
             <span class="fa fa-check" aria-hidden="true"></span>
         </div>
@@ -37,6 +37,7 @@ get_header();
     </div>
 </div>
 <div class="row row-content">
+<<<<<<< HEAD
     <div class="container">
         <h3>Nos dernières actualités</h3>
         <p class="intro">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</p>
@@ -56,6 +57,31 @@ get_header();
             endforeach;
             wp_reset_postdata();
         endif;
+=======
+    <div class="container container-content">
+        <h1>
+            <?php
+            echo get_the_title();
+            ?>
+        </h1>
+        <p>
+            <?php
+            echo get_the_content();
+            ?>
+        </p>
+    </div>
+    <div class="container container-lastest-news">
+        <?php
+        $args_for_latest = array(
+            'post_type'      => 'post',
+            'posts_per_page' => 3
+        );
+        $latest_news = get_posts( $args_for_latest );
+        foreach ($latest_news as $news) :
+            echo $news->post_title;
+        endforeach;
+        wp_reset_postdata();
+>>>>>>> adbe34fe842a53932b99a910bfeddd83e4833a52
         ?>
     </div>
 </div>
