@@ -39,26 +39,13 @@ get_header();
         </p>
     </div>
 </div>
-<?php
-$menu = wp_get_nav_menu_object('main-menu');
-$menu_items = wp_get_nav_menu_items($menu->term_id);
-?>
 <div class="row row-newsletter">
     <div class="container">
         <div class="col-lg-4 col-md-4 col-sm-6 box-menu">
             <h3>Menu</h3>
-            <ul>
-                <?php
-                $actualUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                if ($menu_items !== FALSE) :
-                    foreach ($menu_items as $value):
-                        $class = '';
-                        if ($value->url == $actualUrl) $class = 'menu__current';
-                        echo '<li><a class="'.$class.'" href="' .$value->url.'">'.$value->title.'</a></li>';
-                    endforeach;
-                endif;
-                ?>
-            </ul>
+            <?php
+            echo get_menu('main-menu', 'list');
+            ?>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 box-menu">
             <h3>Coordonnées</h3>
