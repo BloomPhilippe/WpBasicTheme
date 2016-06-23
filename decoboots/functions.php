@@ -57,5 +57,11 @@ function get_menu($name, $display, $class = null)
 {
     $menu = wp_get_nav_menu_object($name);
     $menu_items = wp_get_nav_menu_items($menu->term_id);
+    $children = array();
+    foreach ($menu_items as $item){
+        if($item->menu_item_parent != 0){
+            $children[$item->menu_item_parent][] = $item;
+        }
+    }
     include(locate_template('content/content-menu-' . $display . '.php'));
 }

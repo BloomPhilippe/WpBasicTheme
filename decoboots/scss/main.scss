@@ -57,15 +57,46 @@ body{
   .navbar-nav {
     color: #ffffff;
     li {
+      position: relative;
       padding: 5px 26px 13px 13px;
       text-align: left;
       border-left: 1px solid rgba(255, 255, 255, 0.15);
       margin-right: 2px;
       vertical-align: top;
       white-space: nowrap;
-      &:hover {
+      .children-menu{
+        display: none;
+        position: absolute;
+        margin: 0;
+        padding: 0 0 0 15px;
         background: rgb(0, 48, 90);
-        border-radius: 3px 3px 0px 0px !important;
+        width: 250px;
+        min-height: 50px;
+        left: 0;
+        top:67px;
+        border-radius: 3px;
+        li{
+          list-style: none;
+          border-left: none!important;
+          min-height: 50px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          &:hover {
+            background: transparent!important;
+          }
+
+        }
+      }
+      &:hover {
+        &.parent{
+          background: rgb(0, 48, 90);
+          border-radius: 3px 3px 0px 0px !important;
+          border-left:none;
+        }
+        .children-menu{
+          display: block;
+        }
       }
       a, a:hover, a:focus, a:active {
         color: #ffffff;
