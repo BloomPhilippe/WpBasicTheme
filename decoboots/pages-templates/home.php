@@ -10,7 +10,6 @@ get_header();
 
 <?php while (have_posts()) :
     the_post();
-    $slogans = array('test1', 'test2', 'test3');
     ?>
 <div class="row row-slider">
     <img src="<?php echo get_template_directory_uri ().'/img/overlay-abstract.png'?>">
@@ -18,22 +17,8 @@ get_header();
 <div class="row row-slogans">
     <div class="container">
     <?php
-    foreach ($slogans as $slogan):
+    get_posts_by_type('service', 3);
     ?>
-    <div class="col-lg-4 col-md-4 div-slogans">
-        <div class="col-lg-2 col-md-2 col-icon">
-            <span class="fa fa-check" aria-hidden="true"></span>
-        </div>
-        <div class="col-lg-10 col-md-10">
-            <h4><?php echo $slogan ?></h4>
-            <p>
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
-            </p>
-        </div>
-    </div>
-        <?php
-        endforeach;
-        ?>
     </div>
 </div>
 <div class="row row-content">
@@ -41,21 +26,7 @@ get_header();
         <h3>Nos dernières actualités</h3>
         <p class="intro">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</p>
         <?php
-        global $post;
-        $myposts = get_posts( array(
-            'posts_per_page' => 3,
-            'offset'         => 1,
-            'post_type'  => 'post',
-        ));
-        if ( $myposts ):
-            foreach ( $myposts as $post ) :
-                setup_postdata( $post );
-                get_template_part('content/content', 'post')
-                ?>
-                <?php
-            endforeach;
-            wp_reset_postdata();
-        endif;
+        get_posts_by_type('post', 3);
         ?>
     </div>
 </div>

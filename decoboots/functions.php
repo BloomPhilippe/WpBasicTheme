@@ -28,3 +28,21 @@ function get_count($type){
   $my_query = new WP_Query($args);
   return $my_query->post_count;
 }
+
+function get_posts_by_type($type, $limit){
+    global $post;
+    $myposts = get_posts( array(
+        'posts_per_page' => $limit,
+        'offset'         => 1,
+        'post_type'  => $type,
+    ));
+    if ( $myposts ):
+        foreach ( $myposts as $post ) :
+            setup_postdata( $post );
+            get_template_part('content/content', $type)
+            ?>
+            <?php
+        endforeach;
+        wp_reset_postdata();
+    endif;
+}
