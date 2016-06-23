@@ -20,7 +20,7 @@
                     <?php
                     if (!empty($children[$value->ID])):
                         ?>
-                        <ul class="children-menu">
+                        <ul class="children-menu hidden-xs">
                             <?php
                             foreach ($children[$value->ID] as $child):
                                 ?>
