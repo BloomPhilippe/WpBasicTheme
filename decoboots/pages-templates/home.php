@@ -11,9 +11,9 @@ get_header();
 <?php while (have_posts()) :
     the_post();
     ?>
-<div class="row row-slider">
-    <img src="<?php echo get_template_directory_uri ().'/img/overlay-abstract.png'?>">
-</div>
+    <?php
+    include(locate_template('content/content-slider-static.php'));
+    ?>
 <div class="row row-slogans">
     <div class="container">
     <?php

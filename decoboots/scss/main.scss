@@ -1,9 +1,11 @@
 @import 'variables';
+@import 'config-colors';
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 @import 'icons';
 @import 'open-sans.css';
 @import 'font-awesome.css';
 @import 'museo.css';
+@import 'animate.css';
 
 body{
   p{
@@ -35,7 +37,7 @@ body{
 }
 
 .navbar {
-  background-color: #007CB7;
+  background-color: $base-color;
   border: none;
   .container {
     padding: 30px 15px;
@@ -69,7 +71,7 @@ body{
         position: absolute;
         margin: 0;
         padding: 0 0 0 15px;
-        background: rgb(0, 48, 90);
+        background: $base-color-very-dark;
         width: 250px;
         min-height: 50px;
         left: 0;
@@ -90,7 +92,7 @@ body{
       }
       &:hover {
         &.parent{
-          background: rgb(0, 48, 90);
+          background: $base-color-very-dark;
           border-radius: 3px 3px 0px 0px !important;
           border-left:none;
         }
@@ -98,20 +100,53 @@ body{
           display: block;
         }
       }
-      a, a:hover, a:focus, a:active {
-        color: #ffffff;
+      a {
+        color: $base-white-light;
+        &:hover, &:focus, &:active, &.menu__current{
+          color: #ffffff;
+        }
       }
     }
   }
 }
 
 .row-slider {
-  background: #002C5D;
+  background: $base-color-very-dark;
   height: 470px;
+  position: relative;
   img {
     width: 1903px;
     height: 1071.39px;
   }
+  h3{
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: museo_500_regular;
+  }
+  p{
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+    color: #ffffff;
+    position: absolute;
+    top: 68%;
+    left: 30%;
+    width: 400px;
+    min-height: 100px;
+    background-color: $base-color-very-dark-opacity-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    &.animated{
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+    }
+  }
+
 }
 
 .row-slogans {
@@ -208,7 +243,7 @@ body{
           left: 32%;
           a, a:hover, a:active, a:focus{
             text-decoration: underline;
-            color: #86b946;
+            color: $base-green;
           }
         }
       }
@@ -221,7 +256,7 @@ body{
         justify-content: center;
         align-items: center;
         color: #fff;
-        background-color: #86b946;
+        background-color: $base-green;
         top: 110px;
         left: 43%;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
@@ -234,13 +269,13 @@ body{
 }
 .row-message{
   color: #ffffff!important;
-  background-color: #003869;
+  background-color: $base-color-very-dark;
   text-align: center;
   padding: 30px;
 }
 .row-newsletter{
   padding: 60px 0;
-  background-color: #007CB7;
+  background-color: $base-color;
   min-height: 400px;
   color: #ffffff;
   .container{
@@ -283,7 +318,7 @@ body{
 }
 
 footer{
-  background-color: #003869;
+  background-color:$base-color-very-dark;
   width: 100%;
   color: #DDD;
   padding: 25px 0;
