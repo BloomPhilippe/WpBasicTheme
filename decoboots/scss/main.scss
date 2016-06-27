@@ -317,6 +317,35 @@ body{
   }
 }
 
+.row-breadcrumb{
+  min-height: 300px;
+  background-color: $base-color-very-dark;
+  padding-top: 200px;
+  color: #ffffff;
+  .container{
+    padding-left: 0;
+    .breadcrumb{
+      text-align: right;
+      background-color: transparent;
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      min-height: 70px;
+      a, a:hover, a:active{
+        color: #ffffff;
+        font-weight: 400;
+        font-family: open_sanslight;
+      }
+    }
+  }
+}
+
+.row-content-page{
+  padding: 50px 0;
+}
+
 footer{
   background-color:$base-color-very-dark;
   width: 100%;
