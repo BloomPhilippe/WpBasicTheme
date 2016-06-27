@@ -10,7 +10,23 @@ class ContactForm{
 
     //add callback ajax
     function contact_form(){
-        var_dump('test');
+        parse_str($_GET['formData']);
+        if (empty($name) || empty($mail) || empty($message)){
+            echo "Erreur : le formulaire n'est pas complet";
+        }else{
+            $content = '<div>';
+            $content.= '<p>Nom : ' . $name . '</p><p>Mail : ' . $mail . '</p><p>Phone : ' . $phone .'</p><p>Message : ' . $message . '</p>';
+            $content.= '</div>';
+
+            $newMessage = array(
+                'post_title' => $mail,
+                'post_content' => $content,
+                'post_status' => 'publish',
+                'post_type' => 'message'
+            );
+
+            $newId = wp_insert_post($newMessage);
+        }
     }
 }
 
