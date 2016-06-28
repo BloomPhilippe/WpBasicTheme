@@ -5,7 +5,6 @@ module.exports = function(){
     $(document).ready( function() {
         $('#contact-page').submit(function (e) {
             e.preventDefault();
-            console.log('send data');
             var formResult = $(this).serialize();
             $.ajax({
                 type : "get",

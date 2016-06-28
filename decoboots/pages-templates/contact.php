@@ -11,21 +11,9 @@ get_header();
 <?php while (have_posts()) :
     the_post();
     ?>
-    <div class="row row-breadcrumb">
-        <div class="container">
-            <div class="shodow-top"></div>
-            <div class="col-xs-6 col-md-6">
-                <h1><?php echo get_the_title() ?></h1>
-            </div>
-            <div class="col-xs-6 col-md-6 breadcrumb">
-                <p>
-                    <a href="<?php echo get_site_url() ?>">Accueil</a>
-                    <span class="separator"> > </span>
-                    <span class="current-page"><?php echo get_the_title() ?></span>
-                </p>
-            </div>
-        </div>
-    </div>
+    <?php
+    include(locate_template('content/content-breadcrumb.php'));
+    ?>
     <div class="row row-content-page">
         <div class="container">
             <div class="col-xs-12 col-md-6">
@@ -68,10 +56,6 @@ get_header();
                         <label for="message">Message</label>
                         <textarea id="message" name="message" class="form-control" rows="3"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="file">File input</label>
-                        <input type="file" id="file">
-                    </div>
                     <button type="submit" class="btn btn-success">Submit</button>
                 </form>
                 <div class="result-form">
@@ -79,16 +63,9 @@ get_header();
                     <p class="form-error">Erreur!</p>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-6 informations">
-                <h3>Informations</h3>
-                <div class="col-md-12">
-                    <p><?php the_field('address', 'option'); ?> <?php the_field('address_2', 'option'); ?></p>
-                    <p><?php the_field('postal_code', 'option'); ?> <?php the_field('city', 'option'); ?></p>
-                    <p><?php the_field('country', 'option'); ?></p>
-                    <p>Phone : <?php the_field('phone', 'option'); ?></p>
-                    <p>Mail : <?php the_field('mail', 'option'); ?></p>
-                </div>
-            </div>
+            <?php
+            get_template_part('content/content', 'informations');
+            ?>
         </div>
     </div>
     <?php

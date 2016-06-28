@@ -17,7 +17,6 @@ $args = array(
         'posts_per_page' => 3
       );
 query_posts( $args );
-
 ?>
 <div id="recipient" class="row">
 <?php
