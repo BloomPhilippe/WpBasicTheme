@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a804cc1-4e67-413a-ab3a-89aa16dc8156" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decoboots/css/main.min.css" afterPath="$PROJECT_DIR$/decoboots/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decoboots/pages-templates/home.php" afterPath="$PROJECT_DIR$/decoboots/pages-templates/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decoboots/scss/_config-colors.scss" afterPath="$PROJECT_DIR$/decoboots/scss/_config-colors.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decoboots/scss/main.scss" afterPath="$PROJECT_DIR$/decoboots/scss/main.scss" />
-    </list>
+    <list default="true" id="8a804cc1-4e67-413a-ab3a-89aa16dc8156" name="Default" comment="" />
     <ignored path="wp-decoboots.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -27,7 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decoboots/scss/main.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="627">
@@ -37,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_config-colors.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_config-colors.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/decoboots/scss/_config-colors.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -253,12 +248,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466746186257</updated>
-      <workItem from="1466746188437" duration="3097000" />
+      <workItem from="1466746188437" duration="3211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3097000" />
+    <option name="totallyTimeSpent" value="3211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -339,14 +334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/decoboots/scss/_config-colors.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/decoboots/scss/animate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -359,6 +346,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="145" column="27" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decoboots/scss/_config-colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
           <folding />
         </state>
       </provider>

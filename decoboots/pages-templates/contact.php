@@ -58,7 +58,7 @@ get_header();
                     </div>
                     <div class="form-group">
                         <label for="address2">Adresse 2</label>
-                        <input type="text" class="form-control" id="address2" placeholder="Adresse" name="address">
+                        <input type="text" class="form-control" id="address2" placeholder="Adresse" name="address2">
                     </div>
                     <div class="form-group">
                         <label for="country">Pays</label>
@@ -74,6 +74,10 @@ get_header();
                     </div>
                     <button type="submit" class="btn btn-success">Submit</button>
                 </form>
+                <div class="result-form">
+                    <p class="form-success">Message envoyé</p>
+                    <p class="form-error">Erreur!</p>
+                </div>
             </div>
             <div class="col-xs-12 col-md-6 informations">
                 <h3>Informations</h3>

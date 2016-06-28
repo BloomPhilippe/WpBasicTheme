@@ -12,7 +12,7 @@ include('inc/assets.php');
 include('inc/loadMore.php');
 include('inc/contactForm.php');
 include('inc/exampleData.php');
-include('inc/option-page.php');
+include('inc/optionPage.php');
 include('custom-post-type/type-service.php');
 include('custom-post-type/type-message.php');
 

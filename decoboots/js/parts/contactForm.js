@@ -18,7 +18,12 @@ module.exports = function(){
                 }
             })
             .success(function (result) {
-                console.log('success');
+                var resultObj = JSON.parse(result);
+                if(resultObj.code == 200){
+                    $('.form-success').text(resultObj.message).fadeIn();
+                }else{
+                    $('.form-error').text(resultObj.message).fadeIn();
+                }
             });
 
         })
