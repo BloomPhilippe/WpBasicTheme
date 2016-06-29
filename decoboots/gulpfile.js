@@ -24,7 +24,6 @@ gulp.task('styles', function () {
 });
 
 gulp.task('browserify', function() {
-    // Single entry point to browserify
     gulp.src('js/main.js')
         .pipe(browserify({
           insertGlobals : true,
@@ -45,8 +44,8 @@ gulp.task('browserify', function() {
 gulp.task('watch', function()
 {
   gulp.watch('scss/*.scss', ['styles']);
-  gulp.watch('js/**/*.js', ['browserify']);
-  gulp.watch('js/*.js', ['browserify']);
+  gulp.watch('js/main.js', ['browserify']);
+  gulp.watch('js/parts/*.js', ['browserify']);
 });
 
 // default task

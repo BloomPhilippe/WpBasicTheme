@@ -15,6 +15,18 @@ get_header();
     include(locate_template('content/content-breadcrumb.php'));
     ?>
     <div class="row row-content">
+        <div class="container">
+            <h3>
+                <?php
+                  echo  get_the_title();
+                ?>
+            </h3>
+            <p class="intro">
+                <?php
+                echo get_the_content();
+                ?>
+            </p>
+        </div>
         <div id="recipient" class="container">
             <?php
             get_posts_by_type('post', 3);

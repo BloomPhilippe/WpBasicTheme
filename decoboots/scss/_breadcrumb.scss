@@ -1,0 +1,36 @@
+.row-breadcrumb{
+  background-color: $base-color-very-dark;
+  padding-top: 145px;
+  color: #ffffff;
+  .container{
+    .shodow-top{
+      height: 100%;
+      position: absolute;
+      top: 123px;
+      left: 0;
+    }
+    h1{
+      font-size: 20px;
+      font-family: open_sansbold;
+    }
+    padding-left: 0;
+    .breadcrumb{
+      text-align: right;
+      background-color: transparent;
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      min-height: 60px;
+      a, a:hover, a:active{
+        color: #ffffff;
+        font-weight: 400;
+        font-family: open_sanslight;
+      }
+      .separator{
+        padding: 0 5px;
+      }
+    }
+  }
+}

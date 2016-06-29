@@ -7,130 +7,20 @@
 @import 'font-awesome.css';
 @import 'museo.css';
 @import 'animate.css';
+@import 'helper';
 @import 'menu';
 @import 'slider';
+@import 'breadcrumb';
 @import 'form';
 @import 'posts';
-
-.shodow-top{
-  height: 60%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background: url(../img/shadow-2.png) no-repeat scroll center top;
-}
-
-.row-slogans {
-  padding: 15px;
-  .container {
-    h4 {
-      font-weight: bold;
-      font-family: open_sanslight;
-    }
-    .col-icon {
-      background-color: #ffab00;
-      color: #ffffff;
-      width: 35px;
-      height: 35px;
-      border-radius: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      margin-top: 5px;
-    }
-    .div-slogans{
-      p{
-        line-height: 30px;
-        color: #444;
-        font-size: 13px;
-      }
-    }
-  }
-}
+@import 'services';
+@import 'footer';
 
 .row-message{
   color: #ffffff!important;
   background-color: $base-color-very-dark;
   text-align: center;
   padding: 30px;
-}
-.row-newsletter{
-  padding: 60px 0;
-  background-color: $base-color;
-  min-height: 400px;
-  color: #ffffff;
-  .container{
-    h3{
-      font-size: 16px;
-      font-family: 'open_sanslight';
-      border-bottom: 1px solid rgba(255,255,255, 0.2);
-      letter-spacing: 0.7px;
-      padding-bottom: 8px;
-      margin-bottom: 22px;
-      text-transform: uppercase;
-    }
-    ul{
-      padding: 0;
-      margin: 0;
-      li{
-        padding: 15px 10px;
-        list-style: none;
-        a, a:hover, a:active{
-          color: #ffffff;
-          text-decoration: none;
-          font-family: 'open_sanslight';
-        }
-      }
-    }
-    label{
-      color: #ffffff;
-      text-decoration: none;
-      font-family: 'open_sanslight';
-      font-weight: 500;
-      margin-bottom: 15px;
-    }
-    input{
-      background-color: transparent;
-      &:focus{
-        box-shadow:none;
-      }
-    }
-  }
-}
-
-.row-breadcrumb{
-  background-color: $base-color-very-dark;
-  padding-top: 145px;
-  color: #ffffff;
-  .container{
-    .shodow-top{
-      height: 100%;
-      position: absolute;
-      top: 123px;
-      left: 0;
-    }
-    h1{
-      font-size: 20px;
-      font-family: open_sansbold;
-    }
-    padding-left: 0;
-    .breadcrumb{
-      text-align: right;
-      background-color: transparent;
-      color: #ffffff;
-      border: none;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      min-height: 60px;
-      a, a:hover, a:active{
-        color: #ffffff;
-        font-weight: 400;
-        font-family: open_sanslight;
-      }
-    }
-  }
 }
 
 .row-content-page{
@@ -154,13 +44,6 @@
   }
 }
 
-footer{
-  background-color:$base-color-very-dark;
-  width: 100%;
-  color: #DDD;
-  padding: 25px 0;
-  vertical-align: baseline;
-}
 @media (min-width: 768px) {
   .navbar-nav {
     float: right;

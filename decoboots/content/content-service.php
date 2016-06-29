@@ -15,7 +15,7 @@ $icon = empty(get_field('icon')) ? 'icon-check' : get_field('icon');
 $color = empty(get_field('color')) ? '#ffab00' : get_field('color');
 ?>
 
-<div class="col-lg-4 col-md-4 div-slogans">
+<div class="col-lg-4 col-md-4 service">
     <div class="col-lg-2 col-md-2 col-icon" style="background-color: <?php echo $color ?>!important;">
         <span class="<?php echo $icon?>" aria-hidden="true"></span>
     </div>

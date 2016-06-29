@@ -14,7 +14,7 @@ get_header();
     <?php
     include(locate_template('content/content-slider-static.php'));
     ?>
-<div class="row row-slogans">
+<div class="row row-services">
     <div class="container">
     <?php
     get_posts_by_type('service', 3);

@@ -63,9 +63,11 @@ get_header();
                     <p class="form-error">Erreur!</p>
                 </div>
             </div>
+            <div class="col-xs-12 col-md-6 informations">
             <?php
             get_template_part('content/content', 'informations');
             ?>
+            </div>
         </div>
     </div>
     <?php

@@ -14,30 +14,22 @@
 <div class="row row-newsletter">
   <div class="container">
     <div class="col-lg-4 col-md-4 col-sm-6 box-menu">
-      <h3>Menu</h3>
+      <h3>Sitemap</h3>
       <?php
       echo get_menu('main-menu', 'list');
       ?>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 box-menu">
-      <h3>Coordonnées</h3>
+      <h3>Autres</h3>
       <p>
-        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
+        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le
+        Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla
       </p>
-      <p>
-        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant
-      </p>
-
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 box-menu">
-      <h3>Newsletter</h3>
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      <?php
+      get_template_part('content/content', 'informations');
+      ?>
     </div>
   </div>
 </div>
