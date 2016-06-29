@@ -34,5 +34,28 @@
       animation-duration: 2s;
     }
   }
+}
 
+.row-slider-dynamique{
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  .carousel-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+  .carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item{
+    height: 470px;
+    img{
+      width: 100%;
+      min-height: 470px;
+    }
+  }
 }

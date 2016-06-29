@@ -4,3 +4,4 @@ var contactForm = require('./parts/contactForm.js');
 
 loadMore();
 contactForm();
+$('.carousel').carousel();

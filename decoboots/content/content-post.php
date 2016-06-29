@@ -17,7 +17,7 @@
     $icon = empty(get_field('icon')) ? 'icon-check' : get_field('icon');
     $color = empty(get_field('color')) ? '#ffab00' : get_field('color');
 ?>
-<div class="col-xs-6 col-lg-3 col-md-3 box-post">
+<div class="col-xs-9 col-lg-3 col-md-6 box-post">
     <div class="cover">
         <img class="img-responsive" src="<?php echo $picture ?>">
     </div>
