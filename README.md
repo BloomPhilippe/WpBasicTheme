@@ -1,5 +1,8 @@
 # wp-decoboots
-Themes Wordpress with Bootstrap Sass
+
+## Themes WordPress with Bootstrap Sass
+
+Thème WordPress de base incluant Bootstrap SASS et Gulp
 
 ## Step 1 :
 
