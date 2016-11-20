@@ -7,9 +7,6 @@
  */
 ?>
 <?php
-
-    $title = get_the_title();
-    $content = get_the_content();
     $picture_src = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
     $picture = $picture_src[0];
     $term = get_the_category();
@@ -22,8 +19,8 @@
         <img class="img-responsive" src="<?php echo $picture ?>">
     </div>
     <div class="content">
-        <h4><?php echo $title ?></h4>
-        <p class="text"><?php echo truncate_text($content, 150) ?></p>
+        <h4><?php echo get_the_title(); ?></h4>
+        <p class="text"><?php echo truncate_text(get_the_content(), 150) ?></p>
         <p class="link"><a href="<?php echo get_permalink(); ?>">View details</a></p>
     </div>
     <div class="box-icon" style="background-color: <?php echo $color ?>!important;">

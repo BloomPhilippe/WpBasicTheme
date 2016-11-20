@@ -42,4 +42,6 @@
         endforeach;
     endif;
     ?>
+    <li><a href="<?php echo get_post_type_archive_link( 'post' ); ?>">Archive</a></li>
+    <li><a href="<?php echo get_post_type_archive_link( 'formation' ); ?>">Archive Formations</a></li>
 </ul>

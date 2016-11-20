@@ -36,7 +36,7 @@ if ( is_user_logged_in() ) {
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <?php
-        echo get_menu('main-menu', 'list', 'nav navbar-nav');
+        echo get_menu('menu-primaire', 'list', 'nav navbar-nav');
         ?>
     </div><!-- /.nav-collapse -->
   </div><!-- /.container -->

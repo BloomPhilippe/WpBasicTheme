@@ -61,6 +61,10 @@ gulp.task('js', function() {
         });
 });
 
+gulp.task('move', function () {
+   return gulp.src(['fonts/**/*']).pipe(gulp.dest('build/fonts/'));
+});
+
 
 
 gulp.task('watch', function()
@@ -72,4 +76,5 @@ gulp.task('watch', function()
 gulp.task('default', function() {
     gulp.start('js');
     gulp.start('scss');
+    gulp.start('move');
 });

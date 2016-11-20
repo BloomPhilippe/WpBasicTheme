@@ -107,7 +107,7 @@ class ExampleData
         }
 
         foreach ($newPagesID as $key => $id) {
-            update_post_meta($id, '_wp_page_template', 'pages-templates/' . $key . '.php');
+            update_post_meta($id, '_wp_page_template', 'templates/' . $key . '.php');
             if($key == 'home'){
                 $this->setForntPage($id);
             }
