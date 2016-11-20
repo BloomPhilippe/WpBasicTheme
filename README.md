@@ -32,10 +32,8 @@ Modules inclus :
 ----------------
 
 - Gulp
-- Browserify
 - JQuery
 - Bootstrap
-- Bower
 
 ## Complier vos styles et scripts en développant
 
