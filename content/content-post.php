@@ -20,7 +20,7 @@
     </div>
     <div class="content">
         <h4><?php echo get_the_title(); ?></h4>
-        <p class="text"><?php echo truncate_text(get_the_content(), 150) ?></p>
+        <p class="text"><?php echo get_the_content() ?></p>
         <p class="link"><a href="<?php echo get_permalink(); ?>">View details</a></p>
     </div>
     <div class="box-icon" style="background-color: <?php echo $color ?>!important;">
