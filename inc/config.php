@@ -10,6 +10,6 @@ register_nav_menus(
 add_action( 'after_setup_theme', 'WpBasicThemeSetup' );
 
 function WpBasicThemeSetup(){
-	load_theme_textdomain( 'wp-theme-base-translate', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wpbasictheme', get_template_directory() . '/languages' );
 	add_theme_support( 'post-thumbnails' );
 }

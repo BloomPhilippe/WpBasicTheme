@@ -1,5 +1,4 @@
 <?php
-
 $args = array(
     'post_type'  => 'slide',
     'suppress_filters' => false,
@@ -31,6 +30,7 @@ query_posts( $args );
         <?php
                 $first = false;
             endwhile;
+            wp_reset_postdata();
         else:
         ?>
             <div class="carousel-item active" style="background-image: url(<?php echo get_template_directory_uri().'/img/slide.jpg' ?>)">

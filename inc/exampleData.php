@@ -43,24 +43,8 @@ class ExampleData
                 'slug' => 'categorie-1',
             )
         );
-        $cat_2 = wp_insert_term(
-            'Catégorie 2',
-            'category',
-            array(
-                'description' => 'Categorie test',
-                'slug' => 'categorie-2',
-            )
-        );
-        $cat_3 = wp_insert_term(
-            'Catégorie 3',
-            'category',
-            array(
-                'description' => 'Categorie test',
-                'slug' => 'categorie-3',
-            )
-        );
 
-        for ($x = 0; $x <= 10; $x++) {
+        for ($x = 0; $x <= 3; $x++) {
             $this->insertPostByType('Post' . $x, 'post', $cat);
         }
     }
