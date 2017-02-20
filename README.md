@@ -1,4 +1,4 @@
-# wp-decoboots
+# WpBasicTheme
 
 ## Theme WordPress with Bootstrap Sass
 
