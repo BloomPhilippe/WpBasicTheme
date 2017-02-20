@@ -1,7 +1,5 @@
 # WpBasicTheme
 
-## Theme WordPress with Bootstrap Sass
-
 Thème WordPress de base incluant Bootstrap SASS et Gulp
 
 ## Step 1 :
