@@ -8,13 +8,14 @@
 .navbar-nav{
   li{
     a{
-      color: #ffffff;
+      color: rgba(255,255,255,.5);
       text-decoration: none;
+      padding-right: .5rem;
+      padding-left: .5rem;
     }
     &.current_page_item{
-      background-color: #f0f0ee;
       a{
-        color: #000000;
+        color: #ffffff;
       }
     }
   }
@@ -46,7 +47,7 @@
   padding: 30px 15px;
 }
 
-.col-post{
+.col-post-preview{
   .rounded-circle{
     margin: auto;
     display: block;
@@ -54,4 +55,12 @@
   h2{
     padding: 10px 0;
   }
+}
+
+.col-post{
+  margin-bottom: 15px;
+}
+
+.starter-template{
+  padding-top: 50px;
 }

@@ -3,6 +3,7 @@
 include('inc/config.php');
 include('inc/custom-post-slide.php');
 include('inc/assets.php');
+include('inc/widget.php');
 include('inc/loadMore.php');
 include('inc/contactForm.php');
 include('inc/exampleData.php');

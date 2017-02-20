@@ -30,6 +30,7 @@
     "gulp-util": "*"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6"
+    "bootstrap": "4.0.0-alpha.6",
+    "tinymce": "^4.5.3"
   }
 }
