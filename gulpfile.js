@@ -5,10 +5,12 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    gutil = require('gulp-util'),
-    path = require('path');
+    gutil = require('gulp-util');
 
 var jsPaths = [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/tether/dist/js/tether.js',
+    'node_modules/bootstrap/dist/js/bootstrap.js',
     'js/*.js',
     'js/**/*.js',
     '!js/*.min.js'

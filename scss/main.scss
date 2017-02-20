@@ -1,53 +1,47 @@
-@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
-@import 'variables';
-@import 'base';
-@import 'config-colors';
-@import "iconsvariables";
-@import 'icons';
-@import 'open-sans.css';
-@import 'font-awesome.css';
-@import 'museo.css';
-@import 'animate.css';
-@import 'helper';
-@import 'menu';
-@import 'slider';
-@import 'breadcrumb';
-@import 'form';
-@import 'posts';
-@import 'services';
-@import 'footer';
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-.row-message{
-  color: #ffffff!important;
-  background-color: $base-color-very-dark;
-  text-align: center;
-  padding: 30px;
+#wpadminbar {
+  bottom: 0;
+  top: auto;
 }
 
-.row-content-page{
-  padding: 50px 0;
-  .container{
-    div{
-      padding-left: 0;
+.navbar-nav{
+  li{
+    a{
+      color: #ffffff;
+      text-decoration: none;
     }
-    #contact-page{
-      .form-control{
-        width: 75%;
-      }
-    }
-    .informations{
-      h3{
-        color: #222;
-        font-family: open_sansregular;
-        padding-bottom: 10px;
+    &.current_page_item{
+      background-color: #f0f0ee;
+      a{
+        color: #000000;
       }
     }
   }
 }
 
-@media (min-width: 768px) {
-  .navbar-nav {
-    float: right;
-    margin: 0;
+.slide{
+  .carousel-item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    .carousel-caption {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 10;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #fff;
+      text-align: center;
+      height: 200px;
+    }
   }
+}
+
+.row-page{
+  padding: 30px 15px;
 }

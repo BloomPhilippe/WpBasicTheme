@@ -23,10 +23,6 @@ if (!function_exists('decoboots_enqueue_scripts')) {
         wp_deregister_script('jquery');
         // Ajout du fichier main.min.js dans le head
         wp_register_script('main', get_stylesheet_directory_uri() . '/build/js/main.min.js', TRUE);
-        wp_register_script('jquery', get_stylesheet_directory_uri() . '/node_modules/jquery/dist/jquery.min.js', TRUE);
-        wp_register_script('bootstrap', get_stylesheet_directory_uri() . '/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', TRUE);
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('bootstrap');
         wp_enqueue_script('main');
 
         // Ajout de variable PHP dans le script js

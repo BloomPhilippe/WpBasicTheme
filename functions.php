@@ -1,26 +1,11 @@
 <?php
-/**
- * The main functions file
- *
- * @package WordPress
- * @subpackage DecobootsTheme
- * @since Decoboots Theme 1.0.0
- */
 
-
+include('inc/config.php');
+include('inc/custom-post-slide.php');
 include('inc/assets.php');
 include('inc/loadMore.php');
 include('inc/contactForm.php');
 include('inc/exampleData.php');
-
-register_nav_menus(array(
-    'main-menu' => __('Menu primaire', 'menu-primaire')
-));
-
-function truncate_text($text, $nbr)
-{
-    return substr($text, 0, $nbr) . '...';
-}
 
 function get_count($type)
 {
@@ -50,19 +35,4 @@ function get_posts_by_type($type, $limit)
         endforeach;
         wp_reset_postdata();
     endif;
-}
-
-function get_menu($name, $display, $class = null)
-{
-    $menu = wp_get_nav_menu_object($name);
-    $menu_items = wp_get_nav_menu_items($menu->term_id);
-    $children = array();
-    if(!empty($menu_items)){
-        foreach ($menu_items as $item){
-            if($item->menu_item_parent != 0){
-                $children[$item->menu_item_parent][] = $item;
-            }
-        }
-        include(locate_template('content/content-menu-' . $display . '.php'));
-    }
 }

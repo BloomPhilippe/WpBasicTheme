@@ -4,3 +4,6 @@ node_modules
 node_modules/*
 .idea
 .idea/*
+vendor
+vendor/*
+npm-debug.log

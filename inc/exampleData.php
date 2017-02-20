@@ -14,7 +14,7 @@ class ExampleData
     public function init()
     {
         add_options_page("Generate posts examples", 'Generate posts examples', 'administrator', 'example-data-post.php', array($this, 'display_admin_page_post'));
-        add_options_page("Generate services examples", 'Generate services examples', 'administrator', 'example-data-service.php', array($this, 'display_admin_page_service'));
+        add_options_page("Generate slide examples", 'Generate slides examples', 'administrator', 'example-data-service.php', array($this, 'display_admin_page_service'));
         add_options_page("Generate pages examples", 'Generate pages examples', 'administrator', 'example-data-page.php', array($this, 'display_admin_page_page'));
     }
 
@@ -24,7 +24,7 @@ class ExampleData
     }
 
     public function display_admin_page_service(){
-        $this->insertServices();
+        $this->insertSlides();
         echo '<h3>Create Succcessful</h3>';
     }
 
@@ -35,7 +35,7 @@ class ExampleData
 
     function insertPostWithCategory()
     {
-        $cat_1 = wp_insert_term(
+        $cat = wp_insert_term(
             'Catégorie 1',
             'category',
             array(
@@ -65,10 +65,10 @@ class ExampleData
         }
     }
 
-    function insertServices()
+    function insertSlides()
     {
-        for ($x = 0; $x <= 10; $x++) {
-            $this->insertPostByType('Service' . $x, 'service', null);
+        for ($x = 0; $x <= 3; $x++) {
+            $this->insertPostByType('Slide' . $x, 'slide', null);
         }
     }
 
@@ -91,7 +91,7 @@ class ExampleData
 
     function insertPageWithTemplate()
     {
-        $pages = array('home', 'home2', 'contact', 'onepage', 'news');
+        $pages = array('contact', 'news');
         $newPagesID = array();
 
         foreach ($pages as $page) {
