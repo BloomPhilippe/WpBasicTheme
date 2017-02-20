@@ -3,6 +3,7 @@
         $('#contact-page').submit(function (e) {
             e.preventDefault();
             var formResult = $(this).serialize();
+            console.log(Infos);
             $.ajax({
                 type: "get",
                 contentType: "application/json; charset=utf-8",
@@ -13,7 +14,7 @@
                     formData: formResult
                 }
             })
-                .success(function (result) {
+                .done(function (result) {
                     var resultObj = JSON.parse(result);
                     if (resultObj.code == 200) {
                         $('.form-success').text(resultObj.message).fadeIn();
